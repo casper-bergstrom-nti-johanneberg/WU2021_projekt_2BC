@@ -1,0 +1,55 @@
+/* desktop */
+@media screen and (min-width:1021px){
+    .wrapper{
+        display: grid;
+        width: auto;
+        height: 300vh;
+        grid-template-rows: 50% 1fr 1fr 33% 25% 10em;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'header header'
+        'about-1 about-1'
+        'about-2 about-2'
+        'profile profile-image'
+        'concepts showcase'
+        'footer footer';
+    }
+}
+
+/* ipad/non-apple tablets, but let's be real who uses those. */
+@media screen and (min-width:771px) and (max-width:1020px){	
+    .wrapper{
+        display: grid;
+        width: auto;
+        height: 300vh;
+        grid-template-rows: 50% 1fr 1fr 50% 33% 10em;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'header header'
+        'about-1 about-1'
+        'about-2 about-2'
+        'profile profile'
+        'concepts showcase'
+        'footer footer';
+    }
+}
+
+/* mobile */
+@media screen and (max-width:770px){
+    .wrapper{
+        display: grid;
+        width: 100vw;
+        height: 300vh;
+        grid-template-rows: 100% 1fr 1fr 1fr 50% 50% 50% 10em;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'header'
+        'header'
+        'about-1'
+        'about-2'
+        'profile'
+        'concepts'
+        'showcase'
+        'footer';
+    }
+}

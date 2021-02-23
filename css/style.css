@@ -1,0 +1,234 @@
+
+
+
+html, body {height: 100%;}
+body {margin:0; background:white;  font: normal 16px/1.5em 'Nunito', sans-serif; color: #333;}
+
+
+
+/* desktop */
+@media screen and (min-width:1021px){
+
+    .header{
+        grid-area: header;
+        background-color: #1264A3;
+    }
+
+    .header-logo{
+        grid-area: header-logo;
+    }
+    
+    .header-text{
+        grid-area: header-text;
+    }
+        
+    .intro{
+        grid-area: intro;
+    }
+    
+    .showcase{
+        grid-area: showcase;
+    }
+        
+    .contact{
+        grid-area: contact;
+        background-color: #ECB22D;
+    }
+    
+    .concepts{
+        grid-area: concepts;
+        background-color: #e01e5a;
+    }
+        
+    .footer{
+        grid-area: footer;
+        background-color: #1264A3;
+    }
+
+    .showcase-header{
+        grid-area: showcase-header;
+        background-color: #1264A3;
+    }
+
+    .showcase-item-1{
+        grid-area: showcase-item-1;
+    }
+
+    .showcase-item-2{
+        grid-area: showcase-item-2;
+    }
+
+    .showcase-item-3{
+        grid-area: showcase-item-3;
+    }
+
+    .about-1{
+        grid-area: about-1;
+    }
+
+    .about-2{
+        grid-area: about-2;
+    }
+    
+    .profile{
+        grid-area: profile;
+        background-color: cadetblue;
+    }
+
+    .profile-image{
+        grid-area: profile-image;
+    }
+}
+
+
+/* ipad/non-apple tablets, but let's be real who uses those. */
+@media screen and (min-width:771px) and (max-width:1020px){	
+
+    .T0{display: none;}
+
+    .header{
+        grid-area: header;
+        background-color: aqua;
+    }
+
+    .header-logo{
+        grid-area: header-logo;
+    }
+    
+    .header-text{
+        grid-area: header-text;
+    }
+        
+    .intro{
+        grid-area: intro;
+    }
+    
+    .showcase{
+        grid-area: showcase;
+    }
+        
+    .contact{
+        grid-area: contact;
+        background-color: #ECB22D;
+    }
+    
+    .concepts{
+        grid-area: concepts;
+        background-color: #e01e5a;
+    }
+        
+    .footer{
+        grid-area: footer;
+        background-color: #1264A3;
+    }
+
+    .showcase-header{
+        grid-area: showcase-header;
+        background-color: #1264A3;
+    }
+
+    .showcase-item-1{
+        grid-area: showcase-item-1;
+    }
+
+    .showcase-item-2{
+        grid-area: showcase-item-2;
+    }
+
+    .showcase-item-3{
+        grid-area: showcase-item-3;
+    }
+
+    .about-1{
+        grid-area: about-1;
+    }
+
+    .about-2{
+        grid-area: about-2;
+    }
+    
+    .profile{
+        grid-area: profile;
+        background-color: cadetblue;
+    }
+
+    .profile-image{
+        grid-area: profile-image;
+    }
+}
+
+/* mobile */
+@media screen and (max-width:770px){
+
+    .M0{display: none;}
+
+    .header{
+        grid-area: header;
+        background-color: aqua;
+    }
+
+    .header-logo{
+        grid-area: header-logo;
+    }
+    
+    .header-text{
+        grid-area: header-text;
+    }
+        
+    .intro{
+        grid-area: intro;
+    }
+    
+    .showcase{
+        grid-area: showcase;
+    }
+        
+    .contact{
+        grid-area: contact;
+        background-color: #ECB22D;
+    }
+    
+    .concepts{
+        grid-area: concepts;
+        background-color: #e01e5a;
+    }
+        
+    .footer{
+        grid-area: footer;
+        background-color: #1264A3;
+    }
+
+    .showcase-header{
+        grid-area: showcase-header;
+        background-color: #1264A3;
+    }
+
+    .showcase-item-1{
+        grid-area: showcase-item-1;
+    }
+
+    .showcase-item-2{
+        grid-area: showcase-item-2;
+    }
+
+    .showcase-item-3{
+        grid-area: showcase-item-3;
+    }
+
+    .about-1{
+        grid-area: about-1;
+    }
+
+    .about-2{
+        grid-area: about-2;
+    }
+    
+    .profile{
+        grid-area: profile;
+        background-color: cadetblue;
+    }
+
+    .profile-image{
+        grid-area: profile-image;
+    }
+}
