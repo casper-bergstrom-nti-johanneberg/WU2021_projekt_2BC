@@ -1,234 +1,126 @@
-
-
-
 html, body {height: 100%;}
-body {margin:0; background:white;  font: normal 16px/1.5em 'Nunito', sans-serif; color: #333;}
+body {margin:0; background:var(--white);  font: normal 16px/1.5em 'Nunito', sans-serif; color: #1d1d2c;}
+
+/* color palette */
+:root{--grey: #1d1d2c; --white: #FDF9F3; --pink: #FF6188; --orange: #FC9867; --yellow: #FFD866; --green: #A9DC76; --blue: #C1ECEE; --purple: #AB9DF2;}
 
 
 
-/* desktop */
-@media screen and (min-width:1021px){
+/* header style */
+.header{grid-area: header; background-color: var(--grey);}
+.header-logo{grid-area: header-logo;}
+.header-text{grid-area: header-text;}
 
-    .header{
-        grid-area: header;
-        background-color: #1264A3;
-    }
+/* general elements */
+.intro{grid-area: intro; background-color: var(--pink);}
+.showcase{grid-area: showcase; background-color: var(--blue);}
+.contact{grid-area: contact; background-color: var(--yellow);}
+.concepts{grid-area: concepts; background-color: var(--green);}
 
-    .header-logo{
-        grid-area: header-logo;
-    }
-    
-    .header-text{
-        grid-area: header-text;
-    }
-        
-    .intro{
-        grid-area: intro;
-    }
-    
-    .showcase{
-        grid-area: showcase;
-    }
-        
-    .contact{
-        grid-area: contact;
-        background-color: #ECB22D;
-    }
-    
-    .concepts{
-        grid-area: concepts;
-        background-color: #e01e5a;
-    }
-        
-    .footer{
-        grid-area: footer;
-        background-color: #1264A3;
-    }
+.footer{grid-area: footer; background-color: var(--grey); color: var(--white);}
+.footer-text{padding-left: 1em;}
+.footer-text a{color:var(--white);}
+.footer-text a span{color:var(--green);}
+.footer-credits{padding-left: 2em; float:right; padding-top:.5em; padding-right: 5em;}
 
-    .showcase-header{
-        grid-area: showcase-header;
-        background-color: #1264A3;
-    }
 
-    .showcase-item-1{
-        grid-area: showcase-item-1;
-    }
 
-    .showcase-item-2{
-        grid-area: showcase-item-2;
-    }
 
-    .showcase-item-3{
-        grid-area: showcase-item-3;
-    }
+/* showcase */
+.showcase-header{grid-area: showcase-header; background-color: #1264A3;}
+.showcase-item-1{grid-area: showcase-item-1;}
+.showcase-item-2{grid-area: showcase-item-2;}
+.showcase-item-3{grid-area: showcase-item-3;}
 
-    .about-1{
-        grid-area: about-1;
-    }
+/* about items */
+.about-1{grid-area: about-1;}
+.about-2{grid-area: about-2;}
 
-    .about-2{
-        grid-area: about-2;
-    }
-    
-    .profile{
-        grid-area: profile;
-        background-color: cadetblue;
-    }
+/* profile items */
+.profile{grid-area: profile; background-color: cadetblue;}
+.profile-image{grid-area: profile-image;}
 
-    .profile-image{
-        grid-area: profile-image;
-    }
+/* concept items */
+.concept-item-1{grid-area: concept-item-1;}
+.concept-item-2{grid-area: concept-item-2;}
+.concept-item-3{grid-area: concept-item-3}
+.concept-item-4{grid-area: concept-item-4;}
+
+/* pads */
+.pad-c-c{grid-area: pad-c;}
+.pad{grid: pad;}
+.center {position:relative;top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%);}
+
+/* navbar style */
+.navbar {position:fixed; width: 100%; height: 5em;  z-index:100; color:#1d1d2c;}
+.logo {position:absolute; width: 3em; height:0; opacity: 1;  top:1em; left:1.5em; padding-bottom: 3em; color: currentColor;}
+.navbar-background {position:fixed; width: 100%; background: var(--white); height: 5em; z-index:10; box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);}
+.navbar-title{font: normal 24px/1.25em 'Fredoka One', sans-serif; margin:0; position: absolute; left: 4em; top:0.75em; color: currentColor;}
+body.displayMenu .logo {color: var(--white)}
+
+/* navbar when menu is shown */
+body.displayMenu .navbar {background:transparent}
+body.displayMenu .navbar-title {display:none;}
+body.displayMenu .header .navbar.fade {opacity:1; z-index:100;}
+
+/* menu button with extra style points */
+.navbar-menu-button { position: absolute; top: 2em; right: 2em; width: 1.5em; height: 1.25em; cursor:pointer; color: currentColor;}
+.navbar-menu-button-top { border-top: 3px solid currentColor; padding-bottom: .3em;}
+.navbar-menu-button-middle { border-top: 3px solid currentColor; padding-bottom: 0.3em; }
+.navbar-menu-button-bottom { border-top: 3px solid currentColor; padding-bottom: 0.3em;}
+
+
+
+/* menu button when menu is shown */
+body.displayMenu .navbar-menu-button-top {transform: rotate(45deg) translate(0.3em, 0.5em); border-color:var(--white);}
+body.displayMenu .navbar-menu-button-middle {opacity: 0;}
+body.displayMenu .navbar-menu-button-bottom {transform: rotate(-45deg) translate(0.3em, -0.3em); border-color:var(--white);}
+
+
+
+/* fade-over menu styles */
+.fade-over-menu {position: fixed; background: #1d1d2c; background: rgba(29,29,44,.9); width: 100%; height:100%; z-index: 90;}
+.menu-items {position: relative; top: 10%;}
+.menu-items ul{list-style: none; text-align: center; margin:0; padding:0;}
+.menu-items ul li{display: block; margin:0; padding: 2.5%;}
+.menu-items a{font: 36px/1.25em 'Fredoka One', sans-serif; color: var(--white); border-bottom: 4px solid var(--white);}
+.menu-items a {opacity: 1;}
+.menu-items li {transform: scale(1.0); transition: transform 0.3s ease-out;}
+.menu-items li:hover {transform: scale(1.25);}
+
+.menu-items li:nth-child(1) a{border-color: var(--pink);}
+.menu-items li:nth-child(2) a{border-color: var(--orange);}
+.menu-items li:nth-child(3) a{border-color: var(--yellow);}
+.menu-items li:nth-child(4) a{border-color: var(--green);}
+.menu-items li:nth-child(5) a{border-color: var(--blue);}
+
+/* hidden menu mode */
+.fade-over-menu {left:-100%; opacity:0; transition:opacity 0.3s linear, left 0s linear 0.3s;}
+
+body.displayMenu .fade-over-menu {left:0; opacity:1; transition:opacity 0.3s linear;}
+body.displayMenu .navbar {background:transparent}
+body.displayMenu .navbar-title {display:none;}
+body.displayMenu .navbar.fade-away {opacity:1; z-index:100;}
+
+/* animationer? */
+.adapt {transition: transform 0.3s ease-out, border-color 0.3s linear;}
+.fade-away {transition: opacity 0.3s linear;}
+
+
+h1{
+    font: normal 2.25em/1.25em 'Fredoka One', sans-serif;padding: 0.25em 0;margin:3px;
 }
 
+a {text-decoration: none; color: #0070ff; opacity: 0.8; transition:opacity 0.3s linear;}
 
-/* ipad/non-apple tablets, but let's be real who uses those. */
-@media screen and (min-width:771px) and (max-width:1020px){	
 
-    .T0{display: none;}
-
-    .header{
-        grid-area: header;
-        background-color: aqua;
-    }
-
-    .header-logo{
-        grid-area: header-logo;
-    }
-    
-    .header-text{
-        grid-area: header-text;
-    }
-        
-    .intro{
-        grid-area: intro;
-    }
-    
-    .showcase{
-        grid-area: showcase;
-    }
-        
-    .contact{
-        grid-area: contact;
-        background-color: #ECB22D;
-    }
-    
-    .concepts{
-        grid-area: concepts;
-        background-color: #e01e5a;
-    }
-        
-    .footer{
-        grid-area: footer;
-        background-color: #1264A3;
-    }
-
-    .showcase-header{
-        grid-area: showcase-header;
-        background-color: #1264A3;
-    }
-
-    .showcase-item-1{
-        grid-area: showcase-item-1;
-    }
-
-    .showcase-item-2{
-        grid-area: showcase-item-2;
-    }
-
-    .showcase-item-3{
-        grid-area: showcase-item-3;
-    }
-
-    .about-1{
-        grid-area: about-1;
-    }
-
-    .about-2{
-        grid-area: about-2;
-    }
-    
-    .profile{
-        grid-area: profile;
-        background-color: cadetblue;
-    }
-
-    .profile-image{
-        grid-area: profile-image;
-    }
-}
-
-/* mobile */
+/* display alerations on mobile platform */
 @media screen and (max-width:770px){
-
+    .navbar-title {display:none;}
     .M0{display: none;}
+}
 
-    .header{
-        grid-area: header;
-        background-color: aqua;
-    }
-
-    .header-logo{
-        grid-area: header-logo;
-    }
-    
-    .header-text{
-        grid-area: header-text;
-    }
-        
-    .intro{
-        grid-area: intro;
-    }
-    
-    .showcase{
-        grid-area: showcase;
-    }
-        
-    .contact{
-        grid-area: contact;
-        background-color: #ECB22D;
-    }
-    
-    .concepts{
-        grid-area: concepts;
-        background-color: #e01e5a;
-    }
-        
-    .footer{
-        grid-area: footer;
-        background-color: #1264A3;
-    }
-
-    .showcase-header{
-        grid-area: showcase-header;
-        background-color: #1264A3;
-    }
-
-    .showcase-item-1{
-        grid-area: showcase-item-1;
-    }
-
-    .showcase-item-2{
-        grid-area: showcase-item-2;
-    }
-
-    .showcase-item-3{
-        grid-area: showcase-item-3;
-    }
-
-    .about-1{
-        grid-area: about-1;
-    }
-
-    .about-2{
-        grid-area: about-2;
-    }
-    
-    .profile{
-        grid-area: profile;
-        background-color: cadetblue;
-    }
-
-    .profile-image{
-        grid-area: profile-image;
-    }
+/* display alerations on tablet platform */
+@media screen and (min-width:771px) and (max-width:1020px){	
+    .T0{display: none;}
 }

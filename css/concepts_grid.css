@@ -1,0 +1,57 @@
+/* desktop */
+@media screen and (min-width:1021px){
+    .wrapper{
+        display: grid;
+        width: auto;
+        height: 300vh;
+        grid-template-rows: 1fr 33% 33% 33% 33% 33% 10em;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'pad pad'
+        'concept-item-1 concept-item-1'
+        'concept-item-2 concept-item-2'
+        'concept-item-3 concept-item-3'
+        'concept-item-4 concept-item-4'
+        'contact showcase'
+        'footer footer';
+    }
+}
+
+/* ipad/non-apple tablets, but let's be real who uses those. */
+@media screen and (min-width:771px) and (max-width:1020px){	
+    .wrapper{
+        display: grid;
+        width: auto;
+        height: 300vh;
+        grid-template-rows: 24em 50% 50% 50% 50% 10em;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        'pad pad'
+        'concept-item-1 concept-item-1'
+        'concept-item-2 concept-item-2'
+        'concept-item-3 concept-item-3'
+        'concept-item-4 concept-item-4'
+        'contact showcase'
+        'footer footer';
+    }
+}
+
+/* mobile */
+@media screen and (max-width:770px){
+    .wrapper{
+        display: grid;
+        width: auto;
+        height: 300vh;
+        grid-template-rows: 24em 50% 50% 50% 67% 50% 10em;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'pad'
+        'concept-item-1'
+        'concept-item-2'
+        'concept-item-3'
+        'concept-item-4'
+        'contact' 
+        'showcase'
+        'footer';
+    }
+}
